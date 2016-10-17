@@ -1,4 +1,4 @@
-# BottomDrawer
+# Bottom Drawer
 This sample demonstrates how to create a drawer that slides out from the bottom.<br>
 DRAWERs switch when you press the button
 and slide in automatically after a specified time.
