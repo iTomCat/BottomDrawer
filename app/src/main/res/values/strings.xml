@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyBottomDrawer</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+</resources>

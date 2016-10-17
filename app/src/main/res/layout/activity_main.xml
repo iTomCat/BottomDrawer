@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    tools:context="com.tomaszkot.bottomdrawer.MainActivity">
+
+    <include
+        layout="@layout/bottom_drawer" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="@dimen/button_radius"
+            android:layout_height="@dimen/button_radius"
+            android:id="@+id/button_one"
+            android:text="@string/one"
+            android:background="@drawable/circle"
+            android:layout_marginRight="@dimen/button_margin"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:textSize="28sp"
+            android:textColor="@android:color/white"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+
+        <Button
+            android:layout_width="@dimen/button_radius"
+            android:layout_height="@dimen/button_radius"
+            android:id="@+id/button_two"
+            android:text="@string/two"
+            android:background="@drawable/circle"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_marginRight="@dimen/button_margin"
+            android:textSize="28sp"
+            android:textColor="@android:color/white"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"/>
+
+        <Button
+            android:layout_width="@dimen/button_radius"
+            android:layout_height="@dimen/button_radius"
+            android:id="@+id/button_three"
+            android:text="@string/three"
+            android:background="@drawable/circle"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
+            android:textSize="28sp"
+            android:textColor="@android:color/white"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"/>
+    </LinearLayout>
+
+</RelativeLayout>
