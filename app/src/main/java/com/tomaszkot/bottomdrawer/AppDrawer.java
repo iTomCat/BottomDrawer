@@ -29,6 +29,7 @@ class AppDrawer {
     private int currentDrawer = -1;
     private boolean isSwitched = false;
     private TextView drawerTxt;
+    private RelativeLayout mainLayout;
 
     private enum S {OPEN_NOW, OPEN, CLOSE_NOW, CLOSE, CANCELED_NOW, CANCEL, TIME_OFF}     // States of animation
     private S animState = S.CLOSE;                                                        // Set state
@@ -200,12 +201,11 @@ class AppDrawer {
 
     // ********************************************************************************************* Get the Layout Height
     private void getLayoutHeight() {
-        RelativeLayout layout1 = (RelativeLayout) activity.findViewById(R.id.main_layout);
-        ViewTreeObserver vto = layout1.getViewTreeObserver();
+        mainLayout = (RelativeLayout) activity.findViewById(R.id.main_layout);
+        ViewTreeObserver vto = mainLayout.getViewTreeObserver();
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                RelativeLayout mainLayout = (RelativeLayout) activity.findViewById(R.id.main_layout);
                 mainlayoutHeight = mainLayout.getMeasuredHeight();
                 bottomDrawer.setY(mainlayoutHeight);
                 Log.d("Test", "Layout Height: " + mainlayoutHeight );
